@@ -18,6 +18,8 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import com.evan.hello.HelloJavaSwing.ResourceUtil;
+
 /**
  * @author hu xiao yi
  *
@@ -56,17 +58,17 @@ public class ToolbarFrame4 extends Frame{
 		JPanel toolbar = new JPanel();
 		toolbar.setLayout(new FlowLayout(FlowLayout.LEFT));
 		
-		cutButton = new JButton(new ImageIcon("C:\\Users\\310199253\\Pictures\\icon\\cut.gif"));
+		cutButton = new JButton(new ImageIcon(ResourceUtil.getCutImage()));
 		cutButton.setActionCommand(CCPHandler.CUT);
 		cutButton.addActionListener(ccpHandler);
 		toolbar.add(cutButton);
 		
-		copyButton = new JButton(new ImageIcon("C:\\Users\\310199253\\Pictures\\icon\\copy.gif"));
+		copyButton = new JButton(new ImageIcon(ResourceUtil.getCopyImage()));
 		copyButton.setActionCommand(CCPHandler.COPY);
 		copyButton.addActionListener(ccpHandler);
 		toolbar.add(copyButton);
 		
-		pasteButton = new JButton( new ImageIcon("C:\\Users\\310199253\\Pictures\\icon\\paste.gif"));
+		pasteButton = new JButton( new ImageIcon(ResourceUtil.getPasteImage()));
 		pasteButton.setActionCommand(CCPHandler.PASTE);
 		pasteButton.addActionListener(ccpHandler);
 		toolbar.add(pasteButton);
